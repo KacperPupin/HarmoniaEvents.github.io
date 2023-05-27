@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TIiSKwE</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+    <script type="text/javascript" lang="javascript">
+        obraz_1 = new Image();
+
+        obraz_1.src = "mapa.png";
+    </script>
+    <style>
+    h2 {
+    width: 100%;
+    text-align: center;
+    }
+    article {
+    text-align: justify;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Harmonia Events</h1>
+    </header>
+
+    <article style="height: 910px">
+        <div id="container">
+            <ul id="menu">
+                <li><a href="Index.html" target="_self">Strona główna</a></li>
+                <li><a href="Onas.html" target="_self">O nas</a> </li>
+                <li><a href="Historia.html" target="_self">Historia</a></li>
+                <li><a href="Logo.html" target="_self">Nasze logo</a></li>
+                <li><a href="Tabelka.html" target="_self">Terminarz</a></li>
+                <li><a href="MAP_tag.html" target="_self">Lokalizacja</a></li>
+                <li><a href="Galeria.html" target="_self">Galeria</a></li>
+                <li><a href="Cennik.html" target="_self">Cennik</a></li>
+                <li><a href="Form.html" target="_self">Formularz</a></li>
+            </ul>
+        </div>
+        <h2>Oto mapka stadionu na najbliżny występ </h2>
+        <div>
+            <img src="mapa.png" name="rysunek_domku" usemap="#przyklad_znacznika_map" />
+            <map name="przyklad_znacznika_map">
+                <area href="brama.html" target="_self" shape="rect" coords="22, 693, 875, 603" alt="brawa wejsciowa" />
+                <area href="https://preorder.pl/muzyka-merch" target="_blank" shape="poly" coords="200,584,8,583,6,154,200,300" alt="sklep1" />
+                <area href="widownia.html" target="_self" shape="rect" coords="222,330,686,563" alt="widownia" />
+                <area href="https://preorder.pl/muzyka-merch" target="_blank" shape="poly" coords="710,302,711,584,902,585,903,158" alt="sklep2" />
+                <area href="scena.html" target="_self" shape="poly" coords="90,31,813,30,696,299,215,301" alt="scena" />
+
+            </map>
+        </div>
+    </article>
+    <aside style="height: 935px">
+        <iframe src="Kontrolki_JS.html">
+        </iframe>
+    </aside>
+        <footer>
+        <br />
+        Wykonano przez: Kacper Pupin <br />
+        Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka
+    </footer>
+</body>
+</html>

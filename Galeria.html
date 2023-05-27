@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TIiSKwE</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+    <script>
+        var ImgNo = 0;
+        var Tab_Img = new Array(5);
+        Tab_Img[0] = "z1.jpg";
+        Tab_Img[1] = "z2.jpg";
+        Tab_Img[2] = "z3.jpg";
+        Tab_Img[3] = "z4.jpg";
+        Tab_Img[4] = "z5.jpg";
+
+        function Start() {
+            document.getElementById("img_browser").style.visibility = "visible";
+        }
+
+        function Next() {
+            if (ImgNo < Tab_Img.length - 1) {
+                ImgNo = ImgNo + 1;
+                document.getElementById("image").src = Tab_Img[ImgNo];
+            }
+            else {
+                document.getElementById("image").src = Tab_Img[Tab_Img.length - 1];
+                ImgNo = Tab_Img.length - 1;
+            }
+        }
+
+        function Prev() {
+            if (ImgNo > 0) {
+                ImgNo = ImgNo - 1;
+                document.getElementById("image").src = Tab_Img[ImgNo];
+            }
+            else {
+                document.getElementById("image").src = Tab_Img[0];
+                ImgNo = 0;
+            }
+        }
+
+        function First() {
+            document.getElementById("image").src = Tab_Img[0];
+            ImgNo = 0;
+        }
+
+        function Last() {
+            document.getElementById("image").src = Tab_Img[Tab_Img.length - 1];
+            ImgNo = Tab_Img.length - 1;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Harmonia Events</h1>
+    </header>
+    <article style="height: 780px">
+        <div id="container">
+            <ul id="menu">
+                <li><a href="Index.html" target="_self">Strona główna</a></li>
+                <li><a href="Onas.html" target="_self">O nas</a> </li>
+                <li><a href="Historia.html" target="_self">Historia</a></li>
+                <li><a href="Logo.html" target="_self">Nasze logo</a></li>
+                <li><a href="Tabelka.html" target="_self">Terminarz</a></li>
+                <li><a href="MAP_tag.html" target="_self">Lokalizacja</a></li>
+                <li><a href="Galeria.html" target="_self">Galeria</a></li>
+                <li><a href="Cennik.html" target="_self">Cennik</a></li>
+                <li><a href="Form.html" target="_self">Formularz</a></li>
+            </ul>
+        </div>
+        <h2 style="text-align:center">Galeria obrazów z poprzednich koncertów</h2>
+        <p style="text-align:center">
+            <div id="img_browser" style="text-align:center">
+                <img src="z1.jpg" id="image" height="506" width="900" style="margin-top:60px;">
+                <br /><br />
+                <button onclick="First()" style="width:95px">&lArr; <br /> Pierwszy </button>
+                <button onclick="Prev()" style="width:95px"> &lArr; <br /> Poprzedni </button>
+                <button onclick="Next()" style="width:95px"> &rArr; <br /> Następny </button>
+                <button onclick="Last()" style="width:95px"> &rArr;| <br /> Ostatni </button>
+            </div>
+        </p>
+    </article>
+    <aside style="height: 805px">
+        <iframe src="Kontrolki_JS.html">
+        </iframe>
+    </aside>
+    <footer>
+        <br />
+        Wykonano przez: Kacper Pupin <br />
+        Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka
+    </footer>
+</body>
+</html>

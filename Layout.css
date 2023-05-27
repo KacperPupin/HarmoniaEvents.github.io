@@ -1,0 +1,58 @@
+﻿body {
+    width: 1204px;
+    height: 900px;
+    margin: auto;
+    background-color: #09b827;
+    font-family: 'CustomFontName',Lato;
+    background: url(https://img.wallpapic.pl/i1259-425-149/medium/dyskoteka-zielone-oswietlenie-efektow-wizualnych-laser-tapeta.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+article, aside
+{
+    display:block;
+    float:left;
+}
+
+body > article {
+    width: 964px;
+    height: 700px;
+    padding: 15px;
+    background-color: black;
+    overflow: auto;
+    color: white;
+}
+body > header {
+    background-color: #004a0d;
+    color: white;
+    width: 1200px;
+    height: 50px;
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+aside {
+    width: 200px;
+    height: 725px;
+    background-color: #78947d;
+    border: solid 3px #027315;
+}
+body > footer {
+    border-width: 8px 6px 4px 2px;
+    height: 80px;
+    width: 1200px;
+    float: left;
+    color: white;
+    background-color: #027315;
+    text-align:center;
+}
+iframe
+{
+    width:100%;
+    height:100%;
+    border:none;
+}
+h1 {
+    text-shadow: 0 1px 1px rgba(255,255,255,.9);
+}

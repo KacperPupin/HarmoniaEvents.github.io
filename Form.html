@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TIiSKwE</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+</head>
+<body>
+    <header>
+        <h1>Harmonia Events</h1>
+    </header>
+    <article style="height: 785px">
+        <div id="container">
+            <ul id="menu">
+                <li><a href="Index.html" target="_self">Strona główna</a></li>
+                <li><a href="Onas.html" target="_self">O nas</a> </li>
+                <li><a href="Historia.html" target="_self">Historia</a></li>
+                <li><a href="Logo.html" target="_self">Nasze logo</a></li>
+                <li><a href="Tabelka.html" target="_self">Terminarz</a></li>
+                <li><a href="MAP_tag.html" target="_self">Lokalizacja</a></li>
+                <li><a href="Galeria.html" target="_self">Galeria</a></li>
+                <li><a href="Cennik.html" target="_self">Cennik</a></li>
+                <li><a href="Form.html" target="_self">Formularz</a></li>
+            </ul>
+        </div>
+        <h2>Kwestionariusz osobowy</h2>
+        <form action="mailto: imie.nazwisko@put.poznan.pl" method="post" enctype="text/plain">
+            <p>
+                <i><b>Wypełnij poniższy formularz i prześlij go do nas.</b></i>
+                <br />
+                Obwiązkowe pola oznaczono znakiem (<em>*</em>).
+            </p>
+            <fieldset>
+                <legend>Dane kontaktowe</legend>
+                <label for="imie">Imię<em>*</em></label>
+                <input id="imie" name="name" placeholder="Podaj imię" autofocus required />
+                <br />
+                <label for="">Nazwisko<em>*</em></label>
+                <input id="nazwisko" name="surname" placeholder="Podaj nazwisko" required />
+                <br />
+                <label for="telefon">Nr telefonu</label>
+                <input id="telefon" name="phone" placeholder="(+48)xxx-xxx-xxx" />
+                <br />
+                <label for="">E-mail<em>*</em></label>
+                <input id="mail" name="email" type="email" required />
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend>Szczegółowe dane osobowe</legend>
+                <label for="date">Data urodzenia<em>*</em></label>
+                <input id="date" name="date" type="date" required />
+                <br />
+                <label for="pesel">Numer PESEL<em>*</em></label>
+                <input id="pesel" name="pesel" type="number" placeholder="###########" required />
+                <br />
+                <label for="plec">Płeć<em>*</em></label>
+                <select id="plec" name="plec" required>
+                    <option value="mezczyzna">Mężczyzna</option>
+                    <option value="kobieta">Kobieta</option>
+                    <option value="inna">Inna</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Wykształcenie i doświadczenie zawodowe</legend>
+                <label for="wyksztalcenie">Rodzaj wykształcenia<em>*</em></label>
+                <br />
+                <input list="wyk" name="wyksztalcenie" required />
+                <datalist id="wyk">
+                    <option value="Wykształcenie Podstawowe"></option>
+                    <option value="Wykształcenie Zasadnicze Zawodowe"></option>
+                    <option value="Wykształcenie Zasadnicze Branżowe"></option>
+                    <option value="Wykształcenie Średnie Branżowe"></option>
+                    <option value="Wykształcenie Średnie"></option>
+                    <option value="Wykształcenie Wyższe"></option>
+                    <option value="Brak Wykształcenia"></option>
+                </datalist>
+
+                <br />
+                <label for="">Czy posiada Pan/Pani doświadczenie zawodowe?<em>*</em></label>
+                <br />
+                <input id="doswiadczenie" name="doswiadczenie" type="hidden" required />
+                <label for="">Tak</label>
+                <input id="tak" name="doswiadczenie" type="radio" required />
+                <label for="">Nie</label>
+                <input id="nie" name="doswiadczenie" type="radio" required />
+                <br />
+            </fieldset>
+            <fieldset>
+                <legend>Uwagi</legend>
+                <label for="uwagi"></label>
+                <textarea id="uwagi" name="uwagi"></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Załącznik</legend>
+                <label for="plik">Prześlij swoje CV</label>
+                <input type="file" id="plik" name="file" accept=".pdf" />
+            </fieldset>
+            <label for="zgoda">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji
+                procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000)
+                oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony
+                osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
+                dyrektywy 95/46/WE (RODO).<em>*</em>
+            </label>
+            <input id="zgoda" name="zgoda" type="checkbox" required />
+            <p>
+                <input type="submit" value="Wyślij formularz" />
+                <input type="reset" value="Kasuj dane w formuarzu" />
+            </p>
+        </form>
+    </article>
+    <aside style="height: 810px">
+        <iframe src="Kontrolki_JS.html">
+        </iframe>
+    </aside>
+    <footer>
+        <br />
+        Wykonano przez: Kacper Pupin <br />
+        Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TIiSKwE</title>
+    <link rel="stylesheet" type="text/css" href="Layout.css" />
+    <link rel="stylesheet" type="text/css" href="Menu.css" />
+    <style>
+        article
+        {
+            text-align:center;
+        }
+    </style>
+    <script type="text/javascript" lang="javascript">
+    function przelicz() {
+      var wartosc2 = parseFloat(document.getElementById("wartosc2").value);
+        if (isNaN(wartosc2)) {
+            alert("Proszę uzupełnić wszystkie pola wartościami liczbowymi.");
+            return;
+        }
+
+        var select = document.getElementById("wybor");
+        var indeksWybrany = select.selectedIndex;
+        var zaznaczone = select.options[indeksWybrany].value;
+        var wybranaOpcja = select.value;
+        var checkbox = document.getElementById("okienko");
+        var zaznaczone2 = checkbox.checked;
+
+        var select1 = document.getElementById("wybor1");
+        var indeksWybrany1 = select1.selectedIndex;
+        var zaznaczone1 = select1.options[indeksWybrany1].value;
+        var wybranaOpcja = select1.value;
+
+        var wartosc1 = 100;
+        var przelicznik1 = zaznaczone2 ? 100 : 0;
+        var przelicznik2 = 3;
+        if (zaznaczone === "25") {
+            przelicznik2 = 2.5;
+        } else if (zaznaczone === "2") {
+            przelicznik2 = 2;
+        } else if (zaznaczone === "15") {
+            przelicznik2 = 1.5;
+        } else if (zaznaczone === "1") {
+            przelicznik2 = 1;
+        }
+
+        var przelicznik3 = 1;
+        if (zaznaczone1 === "student") {
+            przelicznik3 = 0.49;
+        } else if (zaznaczone1 === "uczen") {
+            przelicznik3 = 0.63;
+        }
+
+      var wynik1 = wartosc1 + przelicznik1;
+        var wynik2 = wynik1 * przelicznik2;
+        var wynik3 = wartosc2 * wynik2;
+
+        var wynik4 = przelicznik3 * wynik3;
+
+      
+      document.getElementById("wynik4").innerHTML = wynik4;
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Harmonia Events</h1>
+    </header>
+    <article>
+        <div id="container">
+            <ul id="menu">
+                <li><a href="Index.html" target="_self">Strona główna</a></li>
+                <li><a href="Onas.html" target="_self">O nas</a> </li>
+                <li><a href="Historia.html" target="_self">Historia</a></li>
+                <li><a href="Logo.html" target="_self">Nasze logo</a></li>
+                <li><a href="Tabelka.html" target="_self">Terminarz</a></li>
+                <li><a href="MAP_tag.html" target="_self">Lokalizacja</a></li>
+                <li><a href="Galeria.html" target="_self">Galeria</a></li>
+                <li><a href="Cennik.html" target="_self">Cennik</a></li>
+                <li><a href="Form.html" target="_self">Formularz</a></li>
+            </ul>
+        </div>
+        <h2>Cennik najbliższego wydarzenia</h2>
+
+        <label for="wartosc2">Liczba miejsc:</label>
+        <input type="text" id="wartosc2" name="wartosc2" placeholder="Podaj liczbę miejsc"><br>
+
+        <input type="checkbox" id="okienko" name="okienko">
+        <label for="okienko">Przepustka VIP (wiąże się z dodatkową opłatą)</label><br>
+
+        <label for="wybor">Wybierz numer rzędu:</label>
+        <select id="wybor" name="wybor">
+            <option value="bezZmiany">1. rząd</option>
+            <option value="25">2. rząd</option>
+            <option value="2">3. rząd</option>
+            <option value="15">4. rząd</option>
+            <option value="1">5.rząd</option>
+        </select><br>
+
+        <label for="wybor1">Wybierz rodzaj ulgi:</label>
+        <select id="wybor1" name="wybor1">
+            <option value="bezZmiany">Normalny</option>
+            <option value="uczen">Uczeń (37%)</option>
+            <option value="student">Student (51%)</option>
+        </select><br>
+
+        <button onclick="przelicz()">Przelicz</button>
+
+
+        <p>Cena: <span id="wynik4">0</span> zł</p>
+        <p style="text-align:justify; font-size:13px">Cena podstawowa biletu to 100 zł. Przepustka VIP wiąze się z dodatkową opłatą równą 100 zł. Przepustka VIP daje szereg usług: Dostęp do miejsc
+        specjalnych dla osób VIP, spotkanie z artystą oraz szansa zrobienia z nim zdjęcia.
+        Uczniowie oraz studenci mogą skorzystać z dostępnych dla nich ulg. Wymagane jest okazanie legitymacji przy sprawdzaniu biletu.
+        Cena biletu jest przedstawiana dla 5. rzędu. Im miejsce jest bliżej sceny ta cena proporcjonalnie rośnie.</p>
+    </article>
+    <aside>
+        <iframe src="Kontrolki_JS.html">
+        </iframe>
+    </aside>
+    <footer>
+        Wykonano przez: Kacper Pupin <br />
+        Projekt strony internetowej wykonany w ramach zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka
+    </footer>
+</body>
+</html>

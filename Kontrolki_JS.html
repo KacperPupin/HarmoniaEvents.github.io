@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kontrolki JS</title>
+    <script type="text/javascript" src="Clock.js"></script>
+    <style>
+        section.javaScript {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color: forestgreen;
+        }
+
+        #current-date {
+            display: block;
+            font-family: 'Times New Roman';
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #divCounter {
+            display: block;
+            font-family: 'Times New Roman';
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+          #count
+        {
+            display: block;
+            font-family: 'Times New Roman';
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+    </style>
+    <script>
+    function increaseCount() {
+    if (localStorage.pagecount) {
+    localStorage.pagecount = Number(localStorage.pagecount) + 1;
+    } else {
+    localStorage.pagecount = 1;
+    }
+    document.getElementById("count").textContent = localStorage.pagecount;
+    }
+    </script>
+</head>
+<body onload="startclock(); startTimer(); increaseCount();">
+    <script>
+        function startTimer() {
+            startTime = new Date().getTime();
+            sessionStorage.setItem("startTime", startTime);
+        }
+    </script>
+    <section class="javaScript" id="java1">
+        <h2>Pobyt na stronie</h2>
+
+        Czas na stronie:
+        <input id="counter"
+               style="background:none; border:none;
+                      font-weight:bold; text-align:center" />
+        <div id="divCounter"></div>
+        <script type="text/javascript">
+            if (sessionStorage.getItem("counter")) {
+
+                var value = sessionStorage.getItem("counter");
+
+            } else {
+                var value = 0;
+            }
+            document.getElementById('divCounter').innerHTML = value;
+
+            var counter = function () {
+
+                value = parseInt(value) + 1;
+                sessionStorage.setItem("counter", value);
+
+                document.getElementById('divCounter').innerHTML = value;
+            };
+
+            var interval = setInterval(counter, 1000);
+        </script>
+        Liczba odwiedzin:
+        <p><span id="count">0</span></p>
+    </section>
+    <section class="javaScript" id="java2">
+        <h2>Zegarek</h2>
+        Aktualny czas:<br />
+        <input type="text" id="clock"
+               style="background:none; border:none;
+                      font-weight:bold; text-align:center" />
+
+        <br />
+        Data:<br />
+        <script type="text/javascript" lang="javascript">
+            document.addEventListener("DOMContentLoaded", function () {
+                var currentDate = new Date();
+                var dateElement = document.getElementById("current-date");
+                dateElement.innerText = currentDate.toLocaleDateString();
+            });
+        </script>
+        <span id="current-date"></span>
+        <br />
+    </section>
+</body>
+</html>
